@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AddCarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    AddCarViewController* add=[AddCarViewController new];
+    UINavigationController* nav=[[UINavigationController alloc]initWithRootViewController:add];
+    [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
